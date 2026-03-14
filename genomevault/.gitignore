@@ -1,16 +1,7 @@
 node_modules/
+.next/
 .env
 .env.local
-dist/
-build/
-.next/
-__pycache__/
-*.pyc
 logs/
 *.log
 deployment/contract-addresses.json
-.DS_Store
-coverage/
-artifacts/
-cache/
-typechain-types/
