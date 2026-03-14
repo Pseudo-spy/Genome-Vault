@@ -5,6 +5,9 @@
 GenomeVault is a Web3 platform where individuals securely own their genomic DNA data and share it with verified researchers for medical research — while earning rewards. Built on Polygon blockchain with zero-knowledge proofs, IPFS decentralized storage, and MetaMask authentication.
 
 ---
+<div align="center">
+  <img src="Screenshot 2026-03-14 202828.png" width="1200" alt="GenomeVault Banner"/>
+</div>
 
 ## ✨ Features
 
