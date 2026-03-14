@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gv-green:     #00ff88;
+  --gv-green-dim: #00cc66;
+  --gv-dark:      #0a140a;
+  --gv-panel:     #0f1f0f;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: #050a05;
+  color: #c8e6c9;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: #0a140a; }
+::-webkit-scrollbar-thumb  { background: #1a3a1a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00ff88; }
+
+/* Glass card */
+.glass-card {
+  background: rgba(15,31,15,0.7);
+  border: 1px solid rgba(0,255,136,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Neon text */
+.neon-text {
+  color: #00ff88;
+  text-shadow: 0 0 20px rgba(0,255,136,0.6), 0 0 40px rgba(0,255,136,0.3);
+}
+
+/* Animated border */
+.border-glow {
+  border: 1px solid rgba(0,255,136,0.3);
+  box-shadow: 0 0 15px rgba(0,255,136,0.1), inset 0 0 15px rgba(0,255,136,0.03);
+}
+
+/* Grid background */
+.grid-bg {
+  background-image: linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Button primary */
+.btn-primary {
+  @apply bg-gv-green text-gv-black font-heading font-bold tracking-widest uppercase
+         px-6 py-3 border border-gv-green transition-all duration-200
+         hover:bg-transparent hover:text-gv-green hover:shadow-glow-md
+         active:scale-95;
+}
+
+/* Button ghost */
+.btn-ghost {
+  @apply bg-transparent text-gv-green font-heading font-bold tracking-widest uppercase
+         px-6 py-3 border border-gv-green transition-all duration-200
+         hover:bg-gv-green hover:text-gv-black
+         active:scale-95;
+}
+
+/* Input */
+.gv-input {
+  @apply w-full bg-gv-panel border border-gv-border text-gv-text
+         px-4 py-3 font-mono text-sm
+         focus:outline-none focus:border-gv-green focus:shadow-glow-sm
+         placeholder:text-gv-muted transition-all duration-200;
+}
+
+/* Status badges */
+.badge-verified  { @apply bg-green-900/40 text-gv-green   border border-green-800/50 text-xs px-2 py-0.5 font-mono; }
+.badge-pending   { @apply bg-amber-900/40 text-gv-amber   border border-amber-800/50 text-xs px-2 py-0.5 font-mono; }
+.badge-rejected  { @apply bg-red-900/40   text-gv-danger  border border-red-800/50   text-xs px-2 py-0.5 font-mono; }
+.badge-approved  { @apply bg-cyan-900/40  text-gv-cyan    border border-cyan-800/50  text-xs px-2 py-0.5 font-mono; }
